@@ -9,14 +9,20 @@ while not finished:
     except:
         print("Please enter a valid int")
 
+# Print specified number of games
 for games in range(num_games):
 
     # Produce set of numbers (unsorted)
     game = []
     for numbers in range(6):
-        game.append(random.randint(1,45))
+        drawn_number = random.randint(1,45)
 
-    # Sort numbers
+        # Ensure number has not already been picked
+        while drawn_number in game:
+            drawn_number = random.randint(1,45)
+
+        game.append(drawn_number)
+
     game.sort()
 
     for number in range(len(game)):
