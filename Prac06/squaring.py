@@ -24,7 +24,7 @@ class SquareNumberApp(App):
     def handle_calculate(self, value):
         """ handle calculation (could be button press or other call), output result to label widget """
         result = value ** 2
-        self.root.ids.output_label.text = str(result)
+        self.root.ids.output.text = str(result)
 
 
 SquareNumberApp().run()

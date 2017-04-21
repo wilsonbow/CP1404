@@ -7,15 +7,16 @@ BoxLayout:
         TextInput:
             id: input
             multiline: False
+            text: '4.0'
 
         Button:
             id: square_button
             text: 'Square'
-            on_press: app.handle_calculate(int(input.text))
+            on_press: app.handle_calculate(float(input.text))
 
         Label:
             id: output
-            color: (1, 1, 0, 0)
+            color: (1, 0.5, 0.7, 1)
 
     Label:
         text: 'Enter a number and press "Square"'
