@@ -1,28 +1,21 @@
-<HBoxWidget>:
+BoxLayout:
+    orientation: 'vertical'
+
     BoxLayout:
         orientation: 'horizontal'
 
         TextInput:
-            id: input_number
-            text: '7'
-            font_size: 48
+            id: input
             multiline: False
+
         Button:
+            id: square_button
             text: 'Square'
-            # the following line specifies the function in the app class to call when the button is pressed
-            on_press: app.handle_calculate(int(input_number.text))
-        Label:
-            id: output_label
-            font_size: 48
-            color: (0, 1, 1, 1)
-
-<VBoxWidget>:
-    BoxLayout:
-        orientation: 'vertical'
+            on_press: app.handle_calculate(int(input.text))
 
         Label:
-            text: "Enter a number and press ""Square"""
+            id: output
+            color: (1, 1, 0, 0)
 
-<ContainerBox>:
-    HBoxLayout:
-    VBoxLayout:
+    Label:
+        text: 'Enter a number and press "Square"'
