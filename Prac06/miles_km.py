@@ -18,11 +18,15 @@ class ConversionApp(App):
             miles_float = float(miles_input)
         except ValueError:
             miles_float = 0
-        kilometres = miles_float / 1.609344
+        kilometres = miles_float * 1.609344
         self.root.ids.input.text = str(miles_float)
         self.root.ids.output.text = str(kilometres)
 
     def handle_increment(self, current_value, increment_value):
+        try:
+            current_value = float(current_value)
+        except ValueError:
+            current_value = 0.0
         new_value = current_value + increment_value
         self.root.ids.input.text = str(new_value)
 

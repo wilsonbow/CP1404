@@ -1,3 +1,18 @@
+<Widget>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 1, 0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    color: 1, 0, 0, 1
+
+<Button>:
+    canvas.after:
+        Color:
+            rgba: 0, 1, 0, 1
+
+
 BoxLayout:
     orientation: 'vertical'
 
@@ -14,12 +29,12 @@ BoxLayout:
             Button:
                 id: up_btn
                 text: 'Up'
-                on_press: app.handle_increment(float(input.text), 1)
+                on_press: app.handle_increment(input.text, 1)
 
             Button:
                 id: down_btn
                 text: 'Down'
-                on_press: app.handle_increment(float(input.text), -1)
+                on_press: app.handle_increment(input.text, -1)
 
     Button:
         id: convert_btn

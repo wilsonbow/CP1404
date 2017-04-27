@@ -8,7 +8,7 @@ class LabelCreatorApp(App):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.labels = ['a', 'b', 'c', 'd', 'e']
+        self.labels = ['a', 'b', 'c', 'd', 'e', 'f']
 
     def build(self):
         self.root = Builder.load_file('create_widgets.kv')
