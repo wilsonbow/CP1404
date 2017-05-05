@@ -2,7 +2,7 @@ from Prac08.taxi import SilverServiceTaxi
 
 
 def main():
-    testcar = SilverServiceTaxi("Lemon", 100, 50)
+    testcar = SilverServiceTaxi("Hummer", 100, 2)
     print(testcar)
     testcar.drive(20)
     print(testcar)
@@ -14,5 +14,11 @@ def main():
     print(testcar)
     testcar.drive(50)
     print(testcar)
+    print("-" * 30)
+    testcar.add_fuel(10)
+    testcar.start_fare()
+    print(testcar)
+    testcar.drive(10)
+    print("${:.2f}".format(testcar.get_fare()))
 
 main()

@@ -87,4 +87,4 @@ class SilverServiceTaxi(Taxi):
                + self.flagfall
 
     def __str__(self):
-        return super().__str__() + " flagfall of ${}".format(self.flagfall)
+        return super().__str__() + " flagfall of ${:.2f}".format(self.flagfall)
