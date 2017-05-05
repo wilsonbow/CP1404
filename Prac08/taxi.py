@@ -73,3 +73,18 @@ class UnreliableCar(Taxi):
         drive_reliability = randint(0, 101)
         if drive_reliability > self.reliability:
             super().drive(distance)
+
+
+class SilverServiceTaxi(Taxi):
+
+    def __init__(self, name, fuel, fanciness):
+        super().__init__(name, fuel)
+        self.price_per_km *= fanciness
+        self.flagfall = 4.5
+
+    def get_fare(self):
+        return self.price_per_km * self.current_fare_distance \
+               + self.flagfall
+
+    def __str__(self):
+        return super().__str__() + " flagfall of ${}".format(self.flagfall)
